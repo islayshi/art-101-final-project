@@ -1,7 +1,11 @@
 var mgr;
 
+function preload(){
+  defaultFont = loadFont('Domine-Regular.ttf');
+}
+
 function setup() {
-  let c = createCanvas(windowWidth * 0.8, windowHeight * 0.8);
+  let c = createCanvas(750, 750);
   c.parent("p5sketch");
 
   mgr = new SceneManager();
@@ -55,9 +59,10 @@ function keyPressed() {
 
 function defaultBackground() {
   background(255, 94, 140);
-  let s = 'The quick brown fox jumped over the lazy dog.';
-  fill(50);
-  text(s, 10, 10, 70, 80);
+  textSize(32);
+  fill(255,255,255);
+  textFont(defaultFont);
+  text("Art Reposter",  width*0.38, height * 0.1);
 }
 
 // Intro scene constructor function
@@ -65,7 +70,6 @@ function Intro() {
   this.setup = function() {}
 
   this.draw = function() {
-    //background(255, 94, 140);
     defaultBackground();
   }
 
@@ -80,7 +84,8 @@ function FindArtwork() {
   this.setup = function() {}
 
   this.draw = function() {
-    background(255, 204, 0);
+    defaultBackground();
+
   }
 }
 
