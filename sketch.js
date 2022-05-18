@@ -65,14 +65,21 @@ function defaultBackground() {
   text("Art Reposter",  width*0.38, height * 0.1);
 }
 
+function textBody(txt){
+  textSize(23);
+  text(txt,  width*0.15, height * 0.2, width * 0.8, height * 0.8);
+}
+
 // Intro scene constructor function
 function Intro() {
   this.setup = function() {}
 
   this.draw = function() {
     defaultBackground();
-  }
 
+    introText = "Welcome to Art Reposter!\n\n Today I will show you the online ettiquete for respecting art.";
+    textBody(introText);
+  }
   this.keyPressed = function() {
     // switch the scene
     this.sceneManager.showScene(save);
@@ -85,8 +92,10 @@ function FindArtwork() {
 
   this.draw = function() {
     defaultBackground();
-
+    findArtworkText = "Text part 2";
+    textBody(findArtworkText);
   }
+
 }
 
 function NoPerm() {
@@ -94,6 +103,9 @@ function NoPerm() {
 
   this.draw = function() {
     background(0, 204, 0);
+    defaultBackground();
+    noPermText = "Text part 3";
+    textBody(noPermText);
   }
 }
 
