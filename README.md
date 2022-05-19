@@ -1,1 +1,5 @@
-# art-101-final-project
+# ART 101 Final Project - Art Reposter
+
+## Timeline
+
+
