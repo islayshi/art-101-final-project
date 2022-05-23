@@ -4,18 +4,6 @@ let images = [];
 function preload() {
   defaultFont = loadFont('Domine-Regular.ttf');
 
-  //consider a loop here??
-  images[0] = loadImage('Assets/1.png');
-  images[1] = loadImage('Assets/2.png');
-  images[2] = loadImage('Assets/3.png');
-  images[3] = loadImage('Assets/4.png');
-  images[4] = loadImage('Assets/5.png');
-  images[5] = loadImage('Assets/6.png');
-  images[6] = loadImage('Assets/7.png');
-  images[7] = loadImage('Assets/8.png');
-  images[8] = loadImage('Assets/9.png');
-  images[9] = loadImage('Assets/10.png');
-
 }
 
 function setup() {
@@ -33,43 +21,6 @@ function draw() {
   mgr.draw();
 }
 
-function keyPressed() {
-  // You can optionaly handle the key press at global level...
-  switch (key) {
-    case '1':
-      mgr.showScene(Intro);
-      break;
-    case '2':
-      mgr.showScene(FindArtwork);
-      break;
-    case '3':
-      mgr.showScene(NoPerm);
-      break;
-    case '4':
-      mgr.showScene(YesPerm);
-      break;
-    case '5':
-      mgr.showScene(Nope);
-      break;
-    case '6':
-      mgr.showScene(GoAhead);
-      break;
-    case '7':
-      mgr.showScene(ReallyWanna);
-      break;
-    case '8':
-      mgr.showScene(CreditPlease);
-      break;
-    case '9':
-      mgr.showScene(Comparison);
-      break;
-    case '0':
-      mgr.showScene(Final);
-      break;
-  }
-  // ... then dispatch via the SceneManager.
-  mgr.handleEvent("keyPressed");
-}
 
 // DEFAULT BACKGROUND FOR EACH SCENE
 function defaultBackground() {
@@ -78,12 +29,12 @@ function defaultBackground() {
   fill(255, 255, 255);
   textFont(defaultFont);
   textAlign(CENTER);
-  text("Art Reposter", width * 0.5, height * 0.1);
+  text("Artist's Statement", width * 0.5, height * 0.1);
 }
 
 // USE THIS METHOD TO DISPLAY A BODY OF TEXT
 function textBody(txt) {
-  textSize(23);
+  textSize(22);
   fill(255, 255, 255);
   textAlign(LEFT);
   text(txt, width * 0.15, height * 0.2, width * 0.75, height * 0.8);
@@ -110,11 +61,8 @@ function Intro() {
   this.draw = function() {
     defaultBackground();
 
-    introText = "Welcome to Art Reposter!\n\nToday I will show you the online ettiquete for respecting art.";
-    instText = "press 2 to continue";
+    introText = "Welcome to Art Reposter!\n\nAs someone who has been active on social media and posts their own individual work regularly, it's no surprise that I've seen people redistribute my work without permission. In addition, I've been in many communities where this has been at least an annoying issue and at most problematic, as many people easy profit off of other people's digital products unfairly. I hope to educate others on why it's important to respect people and their boundaries. An image you see for a few seconds doesn't take only a few minutes to make. Even if the art did take hours, there still conists of years worth of practice for people adapt to their own style. \n\nI hope to create more understanding for those unfamiliar with this trend, thank you for reading and exploring my page!";
     textBody(introText);
-    instructText(instText);
-    imageBody(images[0]);
   }
   this.keyPressed = function() {
     // switch the scene
