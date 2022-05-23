@@ -110,7 +110,7 @@ function Intro() {
   this.draw = function() {
     defaultBackground();
 
-    introText = "Welcome to Art Reposter!\n\nToday I will show you the online ettiquete for respecting art.";
+    introText = "Welcome to Art Reposter!\n\nToday I will show you how to respect other people's digital creations!";
     instText = "press 2 to continue";
     textBody(introText);
     instructText(instText);
@@ -188,7 +188,7 @@ function GoAhead() {
     textBody(caption);
 
     imageBody(images[5]);
-    instructText("press 7 to continue");
+    instructText("press 8 to continue");
   }
 }
 
@@ -201,7 +201,7 @@ function ReallyWanna() {
     textBody(caption);
 
     imageBody(images[6]);
-    instructText("press 7 to continue");
+    instructText("press 9 to continue");
   }
 }
 
@@ -227,7 +227,7 @@ function Comparison() {
     textBody(caption);
 
     imageBody(images[8]);
-    instructText("press 7 to continue");
+    instructText("press 0 to continue");
   }
 }
 
