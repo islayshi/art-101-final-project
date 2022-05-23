@@ -5,8 +5,8 @@ function preload() {
   defaultFont = loadFont('Domine-Regular.ttf');
 
   //consider a loop here??
-  images[0] = loadImage('Assets/1.png');
-  images[1] = loadImage('Assets/2.png');
+  images[0] = loadImage('Assets/1.gif');
+  images[1] = loadImage('Assets/2.gif');
   images[2] = loadImage('Assets/3.png');
   images[3] = loadImage('Assets/4.png');
   images[4] = loadImage('Assets/5.png');
@@ -14,7 +14,7 @@ function preload() {
   images[6] = loadImage('Assets/7.png');
   images[7] = loadImage('Assets/8.png');
   images[8] = loadImage('Assets/9.png');
-  images[9] = loadImage('Assets/10.png');
+  images[9] = loadImage('Assets/10.gif');
 
 }
 
